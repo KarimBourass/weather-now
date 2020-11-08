@@ -1,9 +1,18 @@
 .container{
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
+.empty-input{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1em;
+   span{
+    margin-left: 1em;
+    font-size: 2.5em;
+   }
+}
 .input-card{
     display: flex;
     justify-content: center;
@@ -38,7 +47,7 @@ body {
 
     &:checked + .c-formContainer {
         .c-form {
-            width: 37.5em;
+            width: 26em;
         }
 
         .c-form__toggle {
@@ -58,11 +67,11 @@ body {
     }
 
     &:not(:checked),
-    &:checked {
-        + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
-            content: 'Thank You! \1F60A';
-        }
-    }
+    // &:checked {
+    //     + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
+    //         content: '\1F60A';
+    //     }
+    // }
 
     &:not(:checked) + .c-formContainer {
         .c-form__input:required:valid ~ .c-form__toggle {
@@ -70,12 +79,13 @@ body {
             cursor: default;
         }
     }
+    
 }
 
 .c-formContainer,
 .c-form,
 .c-form__toggle {
-    width: 20em;
+    width: 70%;
     height: 6.25em;
 }
 
@@ -142,7 +152,7 @@ body {
 .c-form__input {
     color: $your-pink;
     height: 100%;
-    width: 100%;
+    width: 60%;
     padding: 0 0.714em;
 
     &::placeholder {
@@ -151,14 +161,6 @@ body {
 
     &:required:valid {
         color: $salmon;
-
-        + .c-form__buttonLabel {
-            color: $white;
-
-            &::before {
-                pointer-events: initial;
-            }
-        }
     }
 }
 
@@ -183,6 +185,6 @@ body {
     color: inherit;
     padding: 0;
     height: 100%;
-    width: 5em;
+    width: 6em;
     background: linear-gradient(75deg, rgb(214,180,247), rgb(173,203,231));
 }

@@ -33,7 +33,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

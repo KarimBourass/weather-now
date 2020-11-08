@@ -8,7 +8,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class InputCityComponent implements OnInit {
 
-  
+  emptyInput = false;
   @Output() cityName: EventEmitter<string> =   new EventEmitter();
 
   constructor() { }
@@ -17,7 +17,13 @@ export class InputCityComponent implements OnInit {
   }
 
   onSubmit(contactForm){
-    this.cityName.emit(contactForm.value.cityName);
+    console.log(contactForm.value.cityName.length);
+    if(contactForm.value.cityName.length < 1){
+      this.emptyInput = true;
+    }
+    else{
+      this.cityName.emit(contactForm.value.cityName);
+    }
     
   }
 

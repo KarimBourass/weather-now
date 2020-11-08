@@ -23,9 +23,6 @@ export class WeatherService {
      
   }
 
-  getHomeCities(){
-       
-  }
 
 
 }

@@ -1,5 +1,5 @@
 <div class="container">
-<div class="input-card">
+<div class="input-card" fxLayout.sm="100%">
 
     <input class="c-checkbox" type="checkbox" id="checkbox">
     <div class="c-formContainer">
@@ -11,8 +11,10 @@
         <label class="c-form__toggle" for="checkbox"> <span class="material-icons">search</span></label>
       </form>
     </div>
-      
 </div>
+  <div class="empty-input" *ngIf="emptyInput">
+    <h1 >Enter something </h1><span class="material-icons">error</span>
+  </div>
 </div> 
       
   
