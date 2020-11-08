@@ -1,0 +1,18 @@
+<div class="container">
+<div class="input-card">
+
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+      <form class="c-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <input class="c-form__input" placeholder="Search City.." type="text" name="cityName" ngModel>
+        <label class="c-form__buttonLabel" for="checkbox">
+          <button class="c-form__button" type="submit">Search</button>
+        </label>
+        <label class="c-form__toggle" for="checkbox"> <span class="material-icons">search</span></label>
+      </form>
+    </div>
+      
+</div>
+</div> 
+      
+  

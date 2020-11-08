@@ -1,0 +1,42 @@
+
+.container{
+    background-color: rgb(214,180,247) ;
+    padding-bottom: 1em;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    height: 50px;
+    width: 40%;
+  }
+  .whitetext {
+    color:black;
+    margin: 0px;
+    padding:0px;
+  }
+  .whitelogo {
+    color:white;
+    font-size:2em;
+  }
+  .whitelogo:hover {
+    color:lightgray;
+  }
+
+  a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
+  .logo{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+  }

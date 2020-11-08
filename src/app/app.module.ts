@@ -12,6 +12,9 @@ import { WeatherService } from './shared/weather.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { KelvinToCelsiusPipe } from './shared/kelvin-to-celsius.pipe';
 import { WeatherDescriptionPipe } from './shared/weather-description.pipe';
+import { InputCityComponent } from './layouts/input-city/input-city.component';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { WeatherDescriptionPipe } from './shared/weather-description.pipe';
     HeaderComponent,
     HomeComponent,
     KelvinToCelsiusPipe,
-    WeatherDescriptionPipe
+    WeatherDescriptionPipe,
+    InputCityComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { WeatherDescriptionPipe } from './shared/weather-description.pipe';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
