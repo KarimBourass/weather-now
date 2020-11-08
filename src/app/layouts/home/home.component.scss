@@ -1,0 +1,36 @@
+
+
+.example-card {
+    max-width: 400px;
+  }
+
+  mat-card-title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      mat-card-subtitle{
+          margin-top: 1em;
+      }
+
+  }
+
+  mat-card-content{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+
+      .humidity, .temperature, .wind{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      
+      
+  }
+
+
+  
