@@ -11,13 +11,15 @@ import { MaterialModule } from './shared/material.module';
 import { WeatherService } from './shared/weather.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { KelvinToCelsiusPipe } from './shared/kelvin-to-celsius.pipe';
+import { WeatherDescriptionPipe } from './shared/weather-description.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    KelvinToCelsiusPipe
+    KelvinToCelsiusPipe,
+    WeatherDescriptionPipe
   ],
   imports: [
     BrowserModule,

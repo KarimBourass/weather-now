@@ -1,27 +1,31 @@
 <div class="content">
-    <mat-card class="example-card" *ngIf="city$ | async as city">
-    <mat-card-title *ngFor="let weather of city.weather">
-        {{weather.description}}
-        <mat-card-subtitle>
-            {{city.name}} 
-        </mat-card-subtitle>
-    </mat-card-title>
-        <mat-card-content>
-          <div class="humidity">
-              <h4>Humidity</h4>
-              <h2>{{city.main.humidity}}%</h2>
-          </div>
-          <div class="Temperature">
-            <h4>temperature</h4>
-            <h2>{{city.main.temp | kelvinToCelsius}}</h2>
-          </div>
-          <div class="Wind">
-            <h4>wind</h4>
-            <h2>{{city.wind.speed}}</h2>
-          </div>
-        </mat-card-content>
+  <div class="city-card">
+      <mat-card class="example-card" *ngIf="city$ | async as city">
+      <mat-card-title *ngFor="let weather of city.weather">
+          {{weather.description}}
+          <img src="{{ weather.main | weatherDescription }}" alt="weather Descirption">
+          <mat-card-subtitle>
+              {{city.name}} <span class="material-icons">location_on</span>
+          </mat-card-subtitle>
+      </mat-card-title>
+          <mat-card-content>
+            <div class="humidity">
+                <h4>Humidity</h4>
+                <h2>{{city.main.humidity}}%</h2>
+            </div>
+            <div class="temperature">
+              <h4>Temperature</h4>
+              <h2>{{city.main.temp | kelvinToCelsius}}</h2>
+            </div>
+            <div class="wind">
+              <h4>Wind</h4>
+              <h2>{{city.wind.speed}}</h2>
+            </div>
+          </mat-card-content>
 
-       
+        
 
-      </mat-card>
+        </mat-card>
+  </div>
+
 </div>

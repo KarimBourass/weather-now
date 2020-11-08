@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { City } from '../models/city';
-import { map } from 'rxjs/operators'; 
 
 
 @Injectable({
@@ -14,7 +13,7 @@ export class WeatherService {
 
 
   getWeather(){
-     return this.http.get<City>(this.baseURL+'fes'+this.key);
+     return this.http.get<City>(this.baseURL+'agadir'+this.key);
      
   }
 
