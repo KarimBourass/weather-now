@@ -21,7 +21,7 @@ h2{
 }
 
 h2.max-temp{
-    color: #FF6961;
+    color: #ec6e4c;
 }
 h2.min-temp{
     color: #67bfe7;
@@ -49,6 +49,10 @@ mat-card{
           span{
               margin-left: 0.5em;
           }
+
+          .city-location{
+              align-self: center;;
+          }
       }
 
   }
@@ -60,6 +64,7 @@ mat-card{
 
 
       .humidity, .temperature, .wind{
+        min-width: 200px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -68,12 +73,8 @@ mat-card{
   }
 
 
+    
 
- .min-max-temp{
-     display: flex;
-     flex-direction: row;
-
- } 
 
 
  
